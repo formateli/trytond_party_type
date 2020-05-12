@@ -15,7 +15,10 @@ class Party(metaclass=PoolMeta):
         ('private', 'Private Organisation'),
         ('foundation', 'Foundation'),
         ('government', 'Government'),
-        ], 'Type')
+        ], 'Type',
+        states={
+            'readonly': ~Eval('active', True),
+        }, depends=['active'])
     dob = fields.Date('Date of Birth/Establishment')
     gender = fields.Selection([
         (None, ''),
@@ -23,6 +26,7 @@ class Party(metaclass=PoolMeta):
         ('female', 'Female'),
         ], 'Gender',
         states={
+            'readonly': ~Eval('active', True),
             'invisible': Not(In(Eval('party_type'), ['person'])),
         }, depends=['party_type'])
     person_legal_state = fields.Selection([
@@ -33,5 +37,13 @@ class Party(metaclass=PoolMeta):
         ('widow', 'Widow(er)'),
         ], 'Legal state',
         states={
+            'readonly': ~Eval('active', True),
             'invisible': Not(In(Eval('party_type'), ['person'])),
         }, depends=['party_type'])
+
+    @classmethod
+    def __setup__(cls):
+        super(Party, cls).__setup__()
+        cls.last_name.states['invisible'] = \
+                Not(In(Eval('party_type'), ['person']))
+        cls.last_name.depends += ['party_type']
