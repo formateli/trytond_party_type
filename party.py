@@ -25,3 +25,13 @@ class Party(metaclass=PoolMeta):
         states={
             'invisible': Not(In(Eval('party_type'), ['person'])),
         }, depends=['party_type'])
+    person_legal_state = fields.Selection([
+        (None, ''),
+        ('married', 'Married'),
+        ('single', 'Single'),
+        ('divorced', 'Divorced'),
+        ('widow', 'Widow(er)'),
+        ], 'Legal state',
+        states={
+            'invisible': Not(In(Eval('party_type'), ['person'])),
+        }, depends=['party_type'])

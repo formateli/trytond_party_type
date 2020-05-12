@@ -9,6 +9,8 @@ the full copyright notices and license terms. -->
         <field name="dob"/>
         <label name="gender"/>
         <field name="gender"/>
+        <label name="person_legal_state"/>
+        <field name="person_legal_state"/>
         <newline/>
     </xpath>
 </data>
