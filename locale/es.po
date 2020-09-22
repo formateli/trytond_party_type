@@ -1,0 +1,59 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:party.party,party_type:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:party.party,dob:"
+msgid "Date of Birth/Establishment"
+msgstr "Fecha Nacimiento/Inicio"
+
+msgctxt "field:party.party,gender:"
+msgid "Gender"
+msgstr "Género"
+
+msgctxt "field:party.party,person_legal_state:"
+msgid "Legal state"
+msgstr "Estado legal"
+
+msgctxt "selection:party.party,gender:"
+msgid "Female"
+msgstr "Femenino"
+
+msgctxt "selection:party.party,gender:"
+msgid "Male"
+msgstr "Masculino"
+
+msgctxt "selection:party.party,person_legal_state:"
+msgid "Married"
+msgstr "Casado(a)"
+
+msgctxt "selection:party.party,person_legal_state:"
+msgid "Single"
+msgstr "Soltero(a)"
+
+msgctxt "selection:party.party,person_legal_state:"
+msgid "Divorced"
+msgstr "Divorciado(a)"
+
+msgctxt "selection:party.party,person_legal_state:"
+msgid "Widow(er)"
+msgstr "Viudo(a)"
+
+msgctxt "selection:party.party,party_type:"
+msgid "Person"
+msgstr "Persona"
+
+msgctxt "selection:party.party,party_type:"
+msgid "Private Organisation"
+msgstr "Organización Privada"
+
+msgctxt "selection:party.party,party_type:"
+msgid "Foundation"
+msgstr "Fundación"
+
+msgctxt "selection:party.party,party_type:"
+msgid "Government"
+msgstr "Gobierno"
