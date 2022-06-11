@@ -23,8 +23,4 @@ class PartyTypeTestCase(ModuleTestCase):
         self.assertTrue(party.id)
 
 
-def suite():
-    suite = trytond.tests.test_tryton.suite()
-    suite.addTests(unittest.TestLoader().loadTestsFromTestCase(
-        PartyTypeTestCase))
-    return suite
+del ModuleTestCase

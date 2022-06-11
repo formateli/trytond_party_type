@@ -44,4 +44,4 @@ class Party(metaclass=PoolMeta):
         super(Party, cls).__setup__()
         cls.last_name.states['invisible'] = \
                 Not(In(Eval('party_type'), ['person']))
-        cls.last_name.depends += ['party_type']
+        cls.last_name.depends.add('party_type')
